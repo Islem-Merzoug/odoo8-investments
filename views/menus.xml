@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+        <!--Create Top_Menu -->
+        <menuitem
+                id="investissement_top_menu"
+                name="Investissement"
+        />
+
+<!--######################################################################################################-->
+
+                <!--Create Sub_Menu -->
+                <menuitem
+                        id="investissement_sub_menu"
+                        name="Investissements Achats"
+                        parent="investissement_top_menu"
+                />
+                        <!--Create Client menu / Action menu -->
+                        <menuitem id="investissement_client_menu"
+                                  name="Client"
+                                  parent="investissement_sub_menu"
+                                  action="base.action_partner_form"
+                        />
+                        <!--**Create Services menu / Action menu -->
+                        <menuitem id="investissement_services"
+                                  name="Services"
+                                  parent="investissement_sub_menu"
+                                  action=""
+
+                        />
+                        <!--Create Devis menu / Action menu -->
+                        <!--<menuitem id="investissement_devis"-->
+                                  <!--name="Devis"-->
+                                  <!--parent="investissement_sub_menu"-->
+                                  <!--action="sale.action_quotations"-->
+
+                        <!--/>-->
+                        <!--Create Bon_De_Commande menu / Action menu -->
+                        <menuitem id="investissement_bdcommande_menu"
+                                  name="Bon de commande"
+                                  parent="investissement_sub_menu"
+                                  action="purchase.purchase_form_action"
+
+                        />
+
+
+<!--######################################################################################################-->
+
+
+                <!--Create Sub_Menu -->
+                <menuitem id="articles_sub_menu"
+                          name="Articles"
+                          parent="investissement_top_menu"
+                />
+
+                        <!--Create Articles menu / Action menu -->
+                        <menuitem id="articles_menu"
+                                  name="Products"
+                                  parent="articles_sub_menu"
+                                  action="article_action"
+                        />
+                        <!--**Create Article_Par_Catégorie menu / Action menu -->
+                        <menuitem id="article_pcategorie_menu"
+                                  name="Articles par catégorie"
+                                  parent="articles_sub_menu"
+                                  action="product.product_category_action"
+                        />
+
+<!--######################################################################################################-->
+
+
+                <!--Create Sub_Menu -->
+                <menuitem id="gestion_sub_menu"
+                          name="Gestion des stocks"
+                          parent="investissement_top_menu"
+                />
+                        <!--Create article_Par_Catégorie menu / Action menu -->
+                        <menuitem id="inventaires_dinvestissements_menu"
+                                  name="Inventaires des investissements"
+                                  parent="gestion_sub_menu"
+                                  action="stock.action_stock_line_date"
+                        />
+
+
+<!--######################################################################################################-->
+
+
+                <!--Create Sub_Menu -->
+                <menuitem id="configuration_sub_menu"
+                          name="Configuration"
+                          parent="investissement_top_menu"
+                />
+
+                        <!--Create Catégories_darticles menu / Action menu -->
+                        <menuitem id="categorie_darticles_menu"
+                                  name="Catégories d'articles"
+                                  parent="configuration_sub_menu"
+                                  action="product.product_category_action_form"
+                        />
+                        <!--Create Emplacements menu / Action menu -->
+                        <menuitem id="emplacements_menu"
+                                  name="Emplacements"
+                                  parent="configuration_sub_menu"
+                                  action="stock.action_location_form"
+                        />
+    </data>
+</openerp>

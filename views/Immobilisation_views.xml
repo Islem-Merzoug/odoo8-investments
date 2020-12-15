@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+        <!--Define view_form_immobilisation -->
+        <record id="view_form_immobilisation" model="ir.ui.view">
+            <field name="name">immobilisation Form</field>
+            <field name="model">account.asset.asset</field>
+            <field name="inherit_id"  ref="account_asset.view_account_asset_asset_form" />
+            <field name="arch" type="xml">
+
+               <field name="category_id" position="after">
+                            <field name="product_tmpl_id"/>
+               </field>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>
+
+

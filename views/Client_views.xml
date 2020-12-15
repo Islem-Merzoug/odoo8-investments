@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+        <!--Define view_form_client -->
+        <record id="view_form_client" model="ir.ui.view">
+            <field name="name">client Form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id"  ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+               <field name="website" position="after">
+                            <field name="n_rc"/>
+                            <field name="n_ai"/>
+                            <field name="n_is"/>
+                            <field name="n_if"/>
+               </field>
+               <field name="title" position="after">
+                            <field name="type_entreprise" style="width:50%;height:10%;"/>
+                            <field name="nombre_employe"/>
+                            <field name="code_client"/>
+                            <field name="etiquette" />
+               </field>
+
+            </field>
+        </record>
+
+        <!--Define view_tree_client -->
+        <record id="view_tree_client" model="ir.ui.view">
+            <field name="name">client tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id"  ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+                <field  name="email" position="after">
+                    <field name="n_rc" />
+                    <field name="etiquette"/>
+                </field>
+            </field>
+        </record>
+
+        <!--Define client_action -->
+        <!--<record model="ir.actions.act_window" id="client_action">-->
+            <!--<field name="name">Investissement</field>-->
+            <!--<field name="res_model">res.partner</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">kanban,tree,form</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">-->
+                    <!--Create new investment-->
+                <!--</p>-->
+                <!--<p>9IIIIIIIIIIIW !!! :3 xD-->
+                <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
+
+
+    </data>
+</openerp>
+
+

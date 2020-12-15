@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data noupdate="1">
+<!-- Data to load -->
+        <record id="invst_cat_mi" model="ProductCat">
+            <field name="name">Matériel informatique</field>
+            <field name="category_id" ref="invst_categ_mi"/>
+
+        </record>
+
+        <record id="invest_cat_ef" model="ProductCat">
+            <field name="name">Equipement fixe</field>
+            <field name="category_id" ref="invst_categ_ef"/>
+        </record>
+
+        <record id="invest_cat_m" model="ProductCat">
+            <field name="name">Meubles</field>
+            <field name="category_id" ref="product_uom_categ_m"/>
+
+        </record>
+        <record id="invest_cat_d" model="ProductCat">
+            <field name="name">Disposition</field>
+            <field name="category_id" ref="uom_categ_d"/>
+
+        </record>
+        <record id="invest_cat_em" model="ProductCat">
+            <field name="name">Equipement mobile</field>
+            <field name="category_id" ref="uom_categ_em"/>
+
+        </record>
+        <record id="invest_cat_mb" model="ProductCat">
+            <field name="name">Matériel de bureau</field>
+            <field name="category_id" ref="uom_categ_mb"/>
+
+        </record>
+        <record id="invest_cat_mr" model="ProductCat"> product.template
+            <field name="name">Matériel informatique</field>
+            <field name="category_id" ref="inv_categ_interne"/>
+
+        </record>
+
+
+     </data>
+</openerp>
+
+<!--model= nom de la classs-->
